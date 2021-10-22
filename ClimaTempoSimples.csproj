@@ -128,11 +128,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Enumeradores\EnumClima.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110222227006_inicial.cs" />
+    <Compile Include="Migrations\202110222227006_inicial.designer.cs">
+      <DependentUpon>202110222227006_inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cidade.cs" />
-    <Compile Include="Models\Contexto.cs" />
+    <Compile Include="Context\ClimaTempoContext.cs" />
     <Compile Include="Models\Estado.cs" />
     <Compile Include="Models\PrevisaoClima.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -189,6 +195,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202110222227006_inicial.resx">
+      <DependentUpon>202110222227006_inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
